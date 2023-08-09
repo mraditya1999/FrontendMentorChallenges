@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  background: var(--light-gray);
+}
+
+main {
+  min-height: calc(100vh - 2rem);
+  display: grid;
+  justify-content: center;
+}
+
+.card {
+  width: 90vw;
+  max-width: 330px;
+  background: var(--white);
+  align-self: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 10px 10px 20px 4px rgba(0, 0, 0, 0.11);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.card-info {
+  text-align: center;
+}
+
+.card-info h2 {
+  color: var(--dark-blue);
+  margin-block: 1rem;
+  font-size: 1.25rem;
+}
+
+.card-info p {
+  color: var(--grayish-blue);
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+.attribution a:hover {
+  color: var(--dark-blue);
+}
