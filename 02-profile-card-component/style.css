@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  background-color: var(--dark-cyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 52vw bottom 35vh, left 50vw top 52vh;
+}
+
+section {
+  min-height: calc(100vh - 2rem);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background: #fff;
+  width: 85vw;
+  max-width: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card header {
+  background: url('./images/bg-pattern-card.svg') center/cover no-repeat;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.card header .img {
+  border: 0.25rem solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.card header .profile-title {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--dark-desaturated-blue);
+  margin-bottom: 10px;
+}
+
+.card .card-info {
+  text-align: center;
+  padding: 4rem 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+.card .card-info .profile-title span {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.card .card-info .city {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card footer h5 {
+  color: var(--dark-desaturated-blue);
+  font-weight: 700;
+}
+
+.card footer small {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: var(--dark-desaturated-blue);
+  text-transform: capitalize;
+  display: inline-block;
+  font-family: inherit;
+}
+
+.card footer div {
+  line-height: 1;
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--dark-desaturated-blue);
+}
