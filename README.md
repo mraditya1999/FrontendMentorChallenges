@@ -9,8 +9,6 @@ This repository contains challenges and projects that will help you improve your
 - [Challenges](#challenges)
 - [Projects](#projects)
 - [Community](#community)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About Frontend Mentor
 
@@ -55,11 +53,3 @@ The Frontend Mentor community is a great place to connect with other developers,
 - **Learn from Others:** Explore solutions submitted by other community members. You'll find different approaches to the same problems, which can help you learn new techniques and best practices.
 
 - **Collaborate:** Collaborate with other developers on challenges or personal projects. Working together can be a rewarding way to learn and grow.
-
-## Contributing
-
-Frontend Mentor is an open-source project that welcomes contributions from the community. If you'd like to contribute, please read the [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
