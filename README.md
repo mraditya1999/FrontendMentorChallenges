@@ -1,8 +1,8 @@
-# Greetings and welcome 🖐️
+# Greetings and welcome 😊
 
 This repository contains challenges and projects that will help you improve your front-end coding skills while working on real-world projects. Whether you're a beginner looking to learn or an experienced developer looking to sharpen your skills, Frontend Mentor has something for you.
 
-## Table of Contents
+## Table of Contents 📑
 
 - [About Frontend Mentor](#about-frontend-mentor)
 - [Getting Started](#getting-started)
@@ -10,13 +10,13 @@ This repository contains challenges and projects that will help you improve your
 - [Projects](#projects)
 - [Community](#community)
 
-## About Frontend Mentor
+## About Frontend Mentor 👋
 
 Frontend Mentor is an online platform that provides a variety of front-end coding challenges and projects designed to help you learn and improve your web development skills. Each challenge comes with a design and a set of user stories that you need to implement using HTML, CSS, and JavaScript.
 
 The goal of Frontend Mentor is to provide a practical learning experience by simulating real-world scenarios and giving you the opportunity to practice coding skills in a supportive community environment.
 
-## Getting Started
+## Getting Started 📝
 
 To get started with Frontend Mentor, follow these steps:
 
@@ -34,15 +34,15 @@ To get started with Frontend Mentor, follow these steps:
 
 7. **Submit Your Solution:** Once you're satisfied with your solution, submit it on the Frontend Mentor website. You can also share your solution on the Frontend Mentor community platform to get feedback and insights from others.
 
-## Challenges
+## Challenges 🤷
 
 Frontend Mentor offers challenges of varying complexity, from beginner to advanced levels. Challenges cover a wide range of topics including responsive design, layout, accessibility, and interactivity. Each challenge includes a detailed README with instructions and user stories to guide your implementation.
 
-## Projects
+## Projects 📁
 
 In addition to individual challenges, Frontend Mentor also offers larger projects that involve multiple pages and components. These projects provide a more comprehensive learning experience and allow you to practice building complete websites from start to finish.
 
-## Community
+## Community 🌐
 
 The Frontend Mentor community is a great place to connect with other developers, share your solutions, and learn from others. You can:
 
