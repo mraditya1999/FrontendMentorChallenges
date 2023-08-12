@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --clr-paragraph: hsla(0, 0%, 100%, 0.75);
+  --clr--primary: hsl(0, 0%, 95%);
+
+  --ff-primary: 'Lexend Deca', sans-serif;
+  --ff-secondary: 'Big Shoulders Display', sans-serif;
+}
+
+.orange {
+  background: var(--orange);
+  color: var(--orange);
+}
+
+.cyan {
+  background: var(--cyan);
+}
+
+.dark-cyan {
+  background: var(--dark-cyan);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  background: var(--clr--primary);
+}
+
+main {
+  min-height: calc(100vh - 2rem);
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+section {
+  width: 90vw;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+article {
+  padding: 2rem;
+}
+
+article .title {
+  color: var(--clr--primary);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 1.5rem auto;
+  font-family: var(--ff-secondary);
+}
+
+.car-info {
+  margin: 1rem 0;
+  color: var(--clr--primary);
+  font-family: var(--ff-primary);
+  line-height: 1.5;
+}
+
+.btn {
+  font-family: var(--ff-primary);
+  display: inline-block;
+  text-decoration: none;
+  margin: 1rem 0;
+  padding: 0.8rem 1.7rem;
+  border-radius: 27px;
+  background-color: var(--clr--primary);
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  border-color: var(--clr-paragraph);
+  color: var(--clr--primary);
+  background: transparent;
+}
+
+.btn-1 {
+  color: var(--orange);
+}
+
+.btn-2 {
+  color: var(--cyan);
+}
+
+.btn-3 {
+  color: var(--dark-cyan);
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template:
+      'sedan suv'
+      'luxury luxury';
+  }
+
+  .luxury-section {
+    grid-area: luxury;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: 'sedan suv luxury';
+  }
+}
