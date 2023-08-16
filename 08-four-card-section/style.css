@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-blue);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 2rem);
+  background: var(--light-gray);
+  color: var(--grayish-blue);
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding-block: 2rem;
+}
+
+section {
+  width: 90vw;
+  max-width: 1170px;
+  text-align: center;
+}
+
+.heading-primary {
+  font-weight: 200;
+  font-size: clamp(1.325rem, 4vw, 3rem);
+}
+
+.heading-secondary {
+  font-size: clamp(1.325rem, 4vw, 3rem);
+}
+
+.card-text {
+  max-width: 450px;
+  color: var(--grayish-blue);
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  font-weight: 200;
+  margin-inline: auto;
+  margin-block: 2rem 3rem;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: var(--light-gray);
+  border-top: 0.2rem solid transparent;
+}
+
+.card .card-title {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.card .card-content {
+  color: var(--grayish-blue);
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.card .card-img {
+  text-align: right;
+  height: 2.5rem;
+}
+
+.card-img .card-icon {
+  object-fit: cover;
+  height: 100%;
+}
+
+.card-1 {
+  border-color: var(--cyan);
+}
+.card-2 {
+  border-color: var(--red);
+}
+.card-3 {
+  border-color: var(--orange);
+}
+.card-4 {
+  border-color: var(--blue);
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: black;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+@media screen and (min-width: 600px) {
+  .cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  section {
+    width: 95vw;
+    padding-block: 2rem;
+  }
+  .card-1 {
+    grid-row: 2/4;
+  }
+
+  .card-2 {
+    grid-row: 1/3;
+  }
+
+  .card-3 {
+    grid-row: 3/5;
+  }
+
+  .card-4 {
+    grid-row: 2/4;
+  }
+}
