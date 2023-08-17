@@ -4,12 +4,12 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 
 ### Screenshot
 
-[![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)](https://fm-09-single-price-component.netlify.app)
+[![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)](https://fm-09-price-component.netlify.app)
 
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/single-price-component-using-grid-OBYravkVJV)
-- [Live Site URL](https://fm-09-single-price-component.netlify.app)
+- [Live Site URL](https://fm-09-price-component.netlify.app)
 
 ### Built with
 

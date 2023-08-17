@@ -129,6 +129,7 @@ section {
 .attribution p {
   text-align: center;
   font-size: clamp(0.8rem, 2vw, 1rem);
+  color: black;
 }
 
 .attribution a {
