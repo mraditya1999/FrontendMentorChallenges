@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+  /* THEME 1 */
+  --main-background: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  --text-primary: hsl(221, 14%, 31%);
+  --text-white: hsl(0, 0%, 100%);
+
+  --key-background: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+
+  --key-background-2: hsl(30, 25%, 89%);
+  --key-shadow-2: hsl(28, 16%, 65%);
+
+  --key-background-3: hsl(6, 63%, 50%);
+  --key-shadow-3: hsl(6, 70%, 34%);
+}
+
+.theme-2 {
+  --main-background: hsl(0, 0%, 90%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --key-background: hsl(185, 42%, 37%);
+  --key-shadow: hsl(185, 58%, 25%);
+
+  --key-background-2: hsl(25, 98%, 40%);
+  --key-shadow-2: hsl(25, 99%, 27%);
+
+  --key-background-3: hsl(45, 7%, 89%);
+  --key-shadow-3: hsl(35, 11%, 61%);
+
+  --text-primary: hsl(60, 10%, 19%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+.theme-3 {
+  --main-background: hsl(268, 75%, 9%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --key-background: hsl(281, 89%, 26%);
+  --key-shadow: hsl(285, 91%, 52%);
+
+  --key-background-2: hsl(176, 100%, 44%);
+  --key-shadow-2: hsl(177, 92%, 70%);
+
+  --key-background-3: hsl(268, 47%, 21%);
+  --key-shadow-3: hsl(290, 70%, 36%);
+
+  --text-primary: hsl(52, 100%, 62%);
+  --text-secondary: hsl(198, 20%, 13%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  background: var(--main-background);
+  transition: all 0.3s ease;
+}
+
+/* 
+=======================================
+  THEME 2
+=======================================
+ */
+
+.theme-2 body {
+  background: var(--main-background);
+}
+
+.theme-2 .calculator .header {
+  color: var(--text-primary);
+}
+
+.theme-2 .calculator .form-input {
+  color: var(--text-primary);
+  background: var(--screen-background);
+}
+
+.theme-2 .theme-toggle .inner {
+  background: var(--key-background-2);
+}
+
+.theme-2 .btn-container .btn {
+  box-shadow: 0px 2px 0px 0px var(--key-shadow-3);
+  background: var(--key-background-3);
+}
+
+.theme-2 .btn.delete,
+.theme-2 .btn.reset {
+  background: var(--key-background);
+  box-shadow: 0px 2px 0px 0px var(--key-shadow);
+}
+
+.theme-2 .btn.result {
+  background: var(--key-background-2);
+  box-shadow: 0px 2px 0px 0px var(--key-shadow-2);
+}
+
+.theme-2 .inner {
+  transform: translateX(100%);
+}
+
+.theme-2 .btn:hover:not(.reset, .delete, .result) {
+  background: var(--text-white);
+}
+
+/* 
+=======================================
+  THEME 3
+=======================================
+ */
+
+.theme-3 .theme-toggle .inner {
+  transform: translateX(200%);
+  background: var(--key-background-2);
+}
+
+.theme-3 .calculator .header {
+  color: var(--text-primary);
+}
+
+.theme-3 .calculator .form-input {
+  color: var(--text-primary);
+  background: var(--screen-background);
+}
+
+.theme-3 .btn.result {
+  background: var(--key-background-2) !important;
+  box-shadow: 0px 2px 0px 0px var(--key-shadow-2) !important;
+  color: var(--text-secondary);
+}
+
+.theme-3 .btn-container .btn {
+  box-shadow: 0px 2px 0px 0px var(--key-shadow-3);
+  background: var(--key-background-3);
+}
+
+/* 
+=======================================
+  CALCULATOR
+=======================================
+ */
+
+main {
+  min-height: calc(100vh - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 90vw;
+  max-width: 350px;
+}
+
+.calculator .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  text-transform: capitalize;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-toggle small {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-right: 1rem;
+  letter-spacing: 1px;
+  align-self: flex-end;
+  margin-bottom: 0.25rem;
+}
+
+.theme-toggle .toggle-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.theme-toggle .theme-wrapper {
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.theme-toggle .themes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.theme-toggle .outer {
+  height: 1.75rem;
+  width: 4rem;
+  background: var(--keypad-background);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  padding: 0.325rem;
+}
+
+.theme-toggle .inner {
+  width: 1.325rem;
+  height: 1.325rem;
+  border-radius: 50%;
+  background: var(--key-background-3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-input {
+  text-align: right;
+  color: var(--text-white);
+  background: var(--screen-background);
+  border: transparent;
+  outline: transparent;
+  border-radius: 0.325rem;
+  font-size: 2rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.btn-container {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background: var(--keypad-background);
+  border-radius: 0.325rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-container .row {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
+.btn-container .btn {
+  border: transparent;
+  outline: transparent;
+  cursor: pointer;
+  flex: 1 0 1.75rem;
+  padding: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 0.15rem;
+  box-shadow: 0px 2px 0px 0px var(--key-shadow-2);
+  color: var(--text-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.delete,
+.btn.reset {
+  background: var(--key-background);
+  color: var(--text-white);
+  box-shadow: 0px 2px 0px 0px var(--key-shadow);
+}
+
+.btn.result {
+  background: var(--key-background-3);
+  box-shadow: 0px 2px 0px 0px var(--key-shadow-3);
+  color: var(--text-white);
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  color: beige;
+  color: rgb(212, 212, 34);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: rgb(212, 212, 34);
+}

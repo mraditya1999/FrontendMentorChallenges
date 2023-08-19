@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+  --linear-gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+  --grayish-blue: hsl(233, 13%, 49%);
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--very-light-grayish-blue);
+  background-image: url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+  background-position: top -2rem right -8rem, bottom left;
+  background-repeat: no-repeat, no-repeat;
+}
+
+main {
+  min-height: calc(100vh - 2rem);
+  display: grid;
+  place-items: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: 85vw;
+  /* max-width: 800px; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-info {
+  color: var(--grayish-blue);
+}
+
+.card-info .title {
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.card-info .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.toggle span {
+  font-size: 0.75rem;
+  color: --;
+}
+
+.toggle .outer {
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--linear-gradient);
+  display: flex;
+  align-items: center;
+  padding: 0.325rem;
+}
+
+.toggle .inner {
+  width: calc(1.5rem - 0.325rem);
+  height: calc(1.5rem - 0.325rem);
+  border-radius: 50%;
+  background: var(--very-light-grayish-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 100%;
+  max-width: 300px;
+  padding: 1.75rem 2.25rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  color: var(--grayish-blue);
+}
+
+.card .pricing {
+  font-size: clamp(2.75rem, 5vw, 3.5rem);
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1.5rem;
+}
+
+.card .benefits {
+  margin-bottom: 1.5rem;
+  color: var(--grayish-blue);
+}
+
+.card .benefits li {
+  border-top: 1px solid var(--light-grayish-blue);
+  padding: 1rem;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+}
+
+.card .benefits li:last-child {
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.card .btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0;
+  border: 1px solid transparent;
+  outline: transparent;
+  border-radius: 0.325rem;
+  cursor: pointer;
+  background: var(--linear-gradient);
+  color: var(--very-light-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.65rem;
+  transition: all 0.3s ease;
+}
+
+.card .btn:hover {
+  border-color: hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+  background: transparent;
+}
+
+.primary.card {
+  background: var(--linear-gradient);
+  color: var(--very-light-grayish-blue);
+}
+
+.primary.card .btn {
+  color: hsl(237, 63%, 64%);
+  background: var(--very-light-grayish-blue);
+}
+
+.primary.card .btn:hover {
+  border-color: #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.primary.card :is(h4, .pricing, .benefits) {
+  color: var(--very-light-grayish-blue);
+}
+
+.primary.card .benefits li {
+  border-color: var(--light-grayish-blue);
+}
+
+.active.inner {
+  transform: translateX(100%);
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+}
+
+@media screen and (min-width: 1100px) {
+  .cards {
+    gap: 0;
+  }
+
+  .card-2 {
+    padding: 2.75rem 2rem;
+  }
+  .card-2 .pricing {
+    font-size: clamp(2.75rem, 5vw, 3.5rem);
+  }
+}

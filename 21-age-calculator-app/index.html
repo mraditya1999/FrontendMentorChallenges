@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="container">
+      <form class="form">
+
+        <div class="form-group">
+
+          <div class="form-control">
+            <label for="day">Day</label>
+            <div class="form-input">
+              <input type="number" id="day" placeholder="DD">
+              <small class="error-day"></small>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label for="month">Month</label>
+            <div class="form-input">
+              <input type="number" id="month" placeholder="MM">
+              <small class="error-month"></small>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label for="year">Year</label>
+            <div class="form-input">
+              <input type="number" id="year" placeholder="YYYY">
+              <small class="error-year"></small>
+            </div>
+          </div>
+
+        </div>
+        <div class="line">
+          <button type="submit" class="btn">
+            <img src="./assets/images/icon-arrow.svg" alt="arrow">
+          </button>
+        </div>
+
+      </form>
+
+      <div class="form-info">
+        <p id="extream-error"></p>
+        <h1><span class="color output-year">--</span>years</h1>
+        <h1><span class="color output-month">--</span>months</h1>
+        <h1><span class="color output-day">--</span>days</h1>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub?share=true"
+        target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/mraditya1999" target="_blank">Aditya Yadav</a>.
+    </p>
+  </footer>
+
+
+  <script src="./app.js"></script>
+
+</body>
+
+</html>

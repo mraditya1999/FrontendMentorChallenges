@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+
+  --light-grayish-blue-0: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+
+  --transition: all 0.3s ease-in-out;
+  --borderRadius: 0.325rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--light-grayish-blue-0);
+}
+
+section {
+  min-height: calc(100vh -2rem);
+  display: flex;
+  justify-content: center;
+}
+
+.notifications {
+  width: 100vw;
+  max-width: 672px;
+  padding: 3rem 1rem;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.notification-header div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notification-header h1 {
+  font-weight: 800;
+  font-size: clamp(1.25rem, 2vw, 1.325rem);
+}
+
+.notification-header span {
+  width: 2rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-header .read-btn {
+  background: transparent;
+  border: transparent;
+  color: var(--grayish-blue);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.notification-header .read-btn:hover {
+  color: var(--blue);
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  margin-bottom: 0.5rem;
+}
+
+.unread {
+  background: var(--light-grayish-blue-0);
+}
+
+.unread .dot {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--red);
+  margin-left: 0.25rem;
+}
+
+.notification .profile-img {
+  border-radius: 50%;
+  height: 2.5rem;
+  align-self: start;
+  flex: 0 0 2.5rem;
+}
+
+.notification .profile-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.notification .notification-info {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: var(--dark-grayish-blue);
+  word-spacing: 1.5px;
+}
+
+.notification .notification-info .name {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+}
+
+.notification .notification-info .name:hover {
+  color: var(--blue);
+}
+
+.notification-info a {
+  color: var(--dark-grayish-blue);
+  font-weight: 800;
+  transition: var(--transition);
+}
+
+.notification-info a:hover {
+  color: var(--blue);
+}
+
+.notification .club {
+  color: var(--blue);
+}
+
+.notification-info .private-message {
+  padding: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-top: 0.5rem;
+  border-radius: var(--borderRadius);
+  color: var(--dark-grayish-blue);
+  background: var(--white);
+  cursor: pointer;
+  border: 2px solid var(--light-grayish-blue-0);
+}
+
+.notification-info .private-message:hover {
+  background: var(--light-grayish-blue-1);
+}
+
+.notification.comment-notification {
+  justify-content: space-between;
+}
+
+.notification .notification-with-comment {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.comment {
+  gap: 1rem;
+  flex: 0 0 2.5rem;
+  height: 2.5rem;
+}
+
+.notification .comment a {
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.notification .comment a img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.notification .comment a:hover {
+  border-color: var(--light-grayish-blue-1);
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: hsl(228, 45%, 44%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+.attribution a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--red);
+}
+
+@media screen and (min-width: 768px) {
+  .notifications {
+    margin-block: 4rem;
+    padding: 2rem 2rem;
+  }
+}
