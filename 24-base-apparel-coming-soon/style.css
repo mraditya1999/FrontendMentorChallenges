@@ -16,6 +16,7 @@
 section {
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 .hero-wrapper {
@@ -26,17 +27,17 @@ section {
 }
 
 .hero-content-wrapper {
+  padding-top: 4rem;
+  height: 100%;
+  height: calc(100vh - 2rem);
   margin: auto;
   max-width: 30rem;
   padding-inline: 2rem;
-  padding-block: 4rem;
-  height: calc(100% - 2rem);
 }
 
 .logo {
   width: 10rem;
-  margin-bottom: 5rem;
-  /* margin-block: 4rem 5rem; */
+  margin-bottom: 3rem;
 }
 
 .hero-info h1 {
@@ -47,7 +48,7 @@ section {
   color: var(--dark-red);
   font-weight: 400;
   margin-bottom: 2rem;
-  line-height: 1.15;
+  line-height: 1;
 }
 
 .hero-info h1 span {
