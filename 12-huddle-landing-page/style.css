@@ -75,10 +75,8 @@ h4 {
   background: var(--clr-pink);
   color: var(--clr-pale-blue);
   display: inline-block;
-  width: 15rem;
-  max-width: 17rem;
-  padding: 0.75rem;
-  font-size: 0.9rem;
+  width: max-content;
+  padding: 1rem 2rem;
 }
 
 .btn-primary:hover {
@@ -86,11 +84,12 @@ h4 {
 }
 
 .btn-secondary {
-  padding: 0.5rem 1rem;
+  width: max-content;
+  padding: 0.5rem 0.75rem;
   color: var(--clr-pink);
   border-color: var(--clr-pink);
   background: transparent;
-  font-size: 12px;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
 }
 
 .btn-secondary:hover {
@@ -100,30 +99,29 @@ h4 {
 }
 
 .navbar {
-  height: 4rem;
+  height: 5rem;
 }
 
 .nav-center {
   width: 90vw;
   max-width: var(--max-width);
-  display: flex;
   margin: 0 auto;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   height: 100%;
 }
 
 .nav-logo-container {
-  width: 6rem;
+  width: clamp(8rem, 8vw, 15rem);
 }
 
 .nav-logo {
   width: 100%;
-  height: 100%;
 }
 
 .hero-img {
-  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -137,11 +135,15 @@ h4 {
   max-width: 500px;
 }
 
+.hero-heading {
+  font-size: clamp(1.325rem, 3vw, 2rem);
+}
+
 .hero-text {
   color: var(--clr-dark-cyan);
-  max-width: 500px;
-  margin: 1.5rem auto;
-  line-height: var(--line-height);
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
 
 .hero-img-container {
@@ -155,9 +157,8 @@ h4 {
 .stats-section .communities,
 .stats-section .messages {
   width: 90vw;
-  max-width: 10rem;
+  max-width: fit-content;
   margin: 0 auto;
-  /*  */
   margin-bottom: 3rem;
 }
 
@@ -165,13 +166,13 @@ h4 {
   width: 1.6rem;
 }
 .stats-section .stats-heading {
-  font-size: 3rem;
+  font-size: clamp(4rem, 8vw, 10rem);
   font-family: var(--ff-open-sans);
   font-weight: var(--fw-700);
 }
 .stats-section .stats-text {
   color: hsla(192, 100%, 9%, 0.593);
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .grow-together-section {
@@ -186,24 +187,29 @@ h4 {
 .content-bg img {
   display: block;
   width: 100%;
-  height: auto;
   border: 0;
-  -ms-interpolation-mode: bicubic;
 }
 
 .mockup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5rem;
-  height: 100%;
-  max-width: 500px;
+  flex-basis: 50%;
+}
+
+.section-info {
+  flex-basis: 50%;
 }
 
 .section-title {
   margin-bottom: 1rem;
+  font-size: clamp(1.75rem, 3vw, 2rem);
 }
 
 .section-text {
-  max-width: 25rem;
   margin: 0 auto;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 .your-users-section {
