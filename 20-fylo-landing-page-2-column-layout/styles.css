@@ -92,8 +92,8 @@ img:not(.logo) {
 }
 
 .section-center {
-  padding: 0 1rem;
-  width: 85vw;
+  /* padding: 0 1rem; */
+  width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
@@ -260,11 +260,15 @@ Header
 }
 
 .work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: left;
   border-radius: 0.25rem;
+  width: 100%;
   max-width: 400px;
   margin-inline: auto;
 }

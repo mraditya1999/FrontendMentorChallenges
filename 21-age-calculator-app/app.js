@@ -1,4 +1,3 @@
-// JavaScript
 const outputYear = document.querySelector('.output-year');
 const outputMonth = document.querySelector('.output-month');
 const outputDay = document.querySelector('.output-day');
@@ -7,105 +6,104 @@ const inputYear = document.querySelector('#year');
 const inputMonth = document.querySelector('#month');
 const inputDay = document.querySelector('#day');
 
+const dayRegex = /^(0?[1-9]|[1-2][0-9]|3[0-1])$/;
+const monthRegex = /^(0?[1-9]|1[0-2])$/;
+const yearRegex = /^(197\d|198\d|199\d|200\d|201\d|202[0-3])$/;
+
 const form = document.querySelector('.form');
 
-// function validate(element, e) {
-//   const parent = e.currentTarget.parentElement.parentElement;
-//   const nextSibling = e.currentTarget.nextElementSibling;
-
-//   if (element.id === 'day') {
-//     if (element.value < 1 || element.value > 31) {
-//       parent.classList.add('active');
-//       nextSibling.innerHTML = 'Must be a valide date';
-//     }
-//   } else if (element.id === 'month') {
-//     if (inputMonth.value < 1 || inputMonth.value > 12) {
-//       parent.classList.add('active');
-//       nextSibling.innerHTML = 'Must be a valide month';
-//     }
-//   } else if (element.id === 'year') {
-//     if (inputYear.value > currentYear) {
-//       parent.classList.add('active');
-//       nextSibling.innerHTML = 'Must be in the past';
-//     }
-//   }
-
-//   if (inputMonth.value === '') {
-//     parent.classList.add('active');
-//     nextSibling.innerHTML = 'This field is required';
-//   } else {
-//     parent.classList.remove('active');
-//     nextSibling.innerHTML = '';
-//   }
-// }
-
-inputDay.addEventListener('input', function (e) {
-  const parent = e.currentTarget.parentElement.parentElement;
-  const nextSibling = e.currentTarget.nextElementSibling;
-
-  if (inputDay.value === '') {
-    parent.classList.add('active');
-    nextSibling.innerHTML = 'This field is required';
-  } else if (inputDay.value < 1 || inputDay.value > 31) {
-    parent.classList.add('active');
-    nextSibling.innerHTML = 'Must be a valide date';
-  } else {
-    parent.classList.remove('active');
-    nextSibling.innerHTML = '';
-  }
+inputDay.addEventListener('input', () => {
+  validateInput(inputDay, dayRegex, 'Must be a valid date (1-31)');
 });
 
-inputMonth.addEventListener('input', function (e) {
-  const parent = e.currentTarget.parentElement.parentElement;
-  const nextSibling = e.currentTarget.nextElementSibling;
-
-  if (inputMonth.value === '') {
-    parent.classList.add('active');
-    nextSibling.innerHTML = 'This field is required';
-  } else if (inputMonth.value < 1 || inputMonth.value > 12) {
-    parent.classList.add('active');
-    nextSibling.innerHTML = 'Must be a valide month';
-  } else {
-    parent.classList.remove('active');
-    nextSibling.innerHTML = '';
-  }
+inputMonth.addEventListener('input', () => {
+  validateInput(inputMonth, monthRegex, 'Must be a valid month (1-12)');
 });
 
-inputYear.addEventListener('input', function (e) {
-  const parent = e.currentTarget.parentElement.parentElement;
-  const nextSibling = e.currentTarget.nextElementSibling;
-
-  const currentYear = new Date().getFullYear();
-  if (inputYear.value === '') {
-    parent.classList.add('active');
-    nextSibling.innerHTML = 'This field is required';
-  } else if (inputYear.value > currentYear) {
-    parent.classList.add('active');
-    nextSibling.innerHTML = 'Must be in the past';
-  } else {
-    parent.classList.remove('active');
-    nextSibling.innerHTML = '';
-  }
+inputYear.addEventListener('input', () => {
+  validateInput(inputYear, yearRegex, 'Must be a valid year (1970-2023)');
 });
 
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  let iMonth = parseInt(inputMonth.value) - 1;
-  let iYear = parseInt(inputYear.value);
-  let iDate = parseInt(inputDay.value);
+  const isDayValid = validateInput(
+    inputDay,
+    dayRegex,
+    'Must be a valid date (1-31)'
+  );
+  const isMonthValid = validateInput(
+    inputMonth,
+    monthRegex,
+    'Must be a valid month (1-12)'
+  );
+  const isYearValid = validateInput(
+    inputYear,
+    yearRegex,
+    'Must be a valid year (1970-2023)'
+  );
 
-  let previousDate = new Date(iYear, iMonth, iDate);
-  let currentDate = new Date();
+  const isAnyFieldEmpty =
+    inputDay.value === '' || inputMonth.value === '' || inputYear.value === '';
 
-  // Calculate the age difference in years, months, and days.
-  let ageInMilliseconds = currentDate - previousDate;
-  let ageDate = new Date(ageInMilliseconds); // Convert the time difference to a date object.
-  let calculatedYear = ageDate.getUTCFullYear() - 1970; // 1970 is the starting year for the ageDate object.
-  let calculatedMonth = ageDate.getUTCMonth();
-  let calculatedDay = ageDate.getUTCDate() - 1; // Subtract 1 to get the correct day.
+  if (!isDayValid || !isMonthValid || !isYearValid || isAnyFieldEmpty) {
+    return;
+  }
+
+  const iMonth = parseInt(inputMonth.value) - 1;
+  const iYear = parseInt(inputYear.value);
+  const iDate = parseInt(inputDay.value);
+
+  const previousDate = new Date(iYear, iMonth, iDate);
+  const currentDate = new Date();
+
+  const ageInMilliseconds = currentDate - previousDate;
+  const ageDate = new Date(ageInMilliseconds);
+
+  const calculatedYear = ageDate.getUTCFullYear() - 1970;
+  const calculatedMonth = ageDate.getUTCMonth();
+  const calculatedDay = ageDate.getUTCDate() - 1;
 
   outputYear.innerHTML = calculatedYear;
   outputMonth.innerHTML = calculatedMonth;
   outputDay.innerHTML = calculatedDay;
 });
+
+function validateInput(inputElement, regex, errorMessage) {
+  const inputValue = inputElement ? inputElement.value.trim() : '';
+  const parent = inputElement ? inputElement.parentElement.parentElement : null;
+  const nextSibling = inputElement ? inputElement.nextElementSibling : null;
+
+  if (!parent || !nextSibling) {
+    return false;
+  }
+
+  if (inputValue === '') {
+    showError(parent, nextSibling, 'This field is required');
+    return false;
+  } else if (!regex.test(inputValue)) {
+    showError(parent, nextSibling, errorMessage);
+    return false;
+  } else {
+    hideError(parent, nextSibling);
+    return true;
+  }
+}
+
+function showError(parent, nextSibling, message) {
+  if (!parent || !nextSibling) {
+    return;
+  }
+
+  parent.classList.add('active');
+  nextSibling.innerHTML = message;
+}
+
+function hideError(parent, nextSibling) {
+  if (!parent || !nextSibling) {
+    return;
+  }
+
+  parent.classList.remove('active');
+  nextSibling.innerHTML = '';
+}

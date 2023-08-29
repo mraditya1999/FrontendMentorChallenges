@@ -14,23 +14,62 @@ inner.addEventListener('click', function () {
 
 btns.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
-    const reset = e.currentTarget.textContent;
-    const del = e.currentTarget.textContent;
-    const result = e.currentTarget.textContent;
+    const textContent = e.currentTarget.textContent;
 
     try {
-      if (reset === 'RESET') {
+      if (textContent === 'RESET') {
         formInput.value = '';
-      } else if (del === 'DEL') {
+      } else if (textContent === 'DEL') {
         formInput.value = formInput.value.slice(0, -1);
-      } else if (result === '=') {
-        formInput.value =
-          Math.round((eval(formInput.value) + Number.EPSILON) * 100) / 100;
+      } else if (textContent === '=') {
+        try {
+          const result = eval(formInput.value);
+          if (isNaN(result) || !isFinite(result)) {
+            formInput.value = 'invalid Expression';
+          } else {
+            formInput.value = result.toFixed(2);
+          }
+        } catch (error) {
+          formInput.value = 'invalid Expression';
+          console.log(error);
+        }
       } else {
-        formInput.value += e.currentTarget.textContent;
+        formInput.value += textContent;
       }
     } catch (error) {
+      formInput.value = 'Error';
       console.error('An error occurred:', error);
     }
   });
+});
+
+// Keyboard support (optional)
+document.addEventListener('keydown', function (e) {
+  const key = e.key;
+  const allowedKeys = [
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '.',
+    '+',
+    '-',
+    '*',
+    '/',
+  ];
+
+  if (allowedKeys.includes(key)) {
+    formInput.value += key;
+  } else if (key === 'Enter') {
+    // Handle the Enter key as the equals sign
+    e.preventDefault(); // Prevent form submission if this is inside a form
+  } else if (key === 'Backspace') {
+    formInput.value = formInput.value.slice(0, -1);
+  }
 });

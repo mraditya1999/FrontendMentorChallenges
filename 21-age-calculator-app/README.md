@@ -21,11 +21,7 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### What I learned
 
-I have gained a comprehensive understanding of client-side data validation techniques, proficiently employing try-catch blocks for effective error handling. Additionally, I have acquired the ability to manipulate the Document Object Model (DOM) to enhance the user experience.
-
-### Continued development
-
-I have successfully tackled the age calculator challenge, overcoming obstacles related to diverse edge cases. Although I managed to complete it, I recognize areas for enhancement. Notably, I aim to streamline the code to enhance readability and minimize repetition.
+I have gained a comprehensive understanding of client-side data validation techniques,also uses Regular Expressions(Regex) for effective error handling. Additionally, I have acquired the ability to manipulate the Document Object Model (DOM) to enhance the user experience.
 
 ## Author
 
