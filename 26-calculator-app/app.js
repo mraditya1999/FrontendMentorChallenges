@@ -27,7 +27,9 @@ btns.forEach(function (btn) {
           if (isNaN(result) || !isFinite(result)) {
             formInput.value = 'invalid Expression';
           } else {
-            formInput.value = result.toFixed(2);
+            var resultString = result.toFixed(2);
+            resultString = resultString.replace(/\.?0+$/, '');
+            formInput.value = resultString;
           }
         } catch (error) {
           formInput.value = 'invalid Expression';

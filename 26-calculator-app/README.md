@@ -4,12 +4,12 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Screenshot
 
-[![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)](https://26-calculator-app.netlify.app)
+[![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)](https://fm-26-calculator-app.netlify.app)
 
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/calculator-app-Ko2LulgLbM)
-- [Live Site URL](https://26-calculator-app.netlify.app)
+- [Live Site URL](https://fm-26-calculator-app.netlify.app)
 
 ### Built with
 
