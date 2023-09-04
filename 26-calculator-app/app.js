@@ -27,7 +27,7 @@ btns.forEach(function (btn) {
           if (isNaN(result) || !isFinite(result)) {
             formInput.value = 'invalid Expression';
           } else {
-            var resultString = result.toFixed(2);
+            var resultString = result.toLocaleString('en-IN');
             resultString = resultString.replace(/\.?0+$/, '');
             formInput.value = resultString;
           }
