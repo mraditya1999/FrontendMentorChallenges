@@ -8,19 +8,19 @@ This is a solution to the [Recipe Page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/qr-code-component-9LIGpXjOwy)
-- [Live Site URL](https://fm-31-recipe-page.netlify.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/recipe-page-1Ux3iSMlQq)
+- [Live Site URL](https://fm-31-recipe-page.netlify.app)
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flex-box
 - Mobile-first workflow
 
 ## Author
 
-- Portfolio - [@mraditya1999](https://www.adityayadav-dev.netlify.app)
+- Portfolio - [@mraditya1999](https://adityayadav-dev.netlify.app/)
 - Twitter - [@mraditya1999](https://twitter.com/mraditya1999)
 - Linkedin - [@mraditya1999](https://www.linkedin.com/in/mraditya1999/)
 - Medium - [@mraditya1999](https://medium.com/@mraditya1999)
