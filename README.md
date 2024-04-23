@@ -68,6 +68,7 @@ Experience the magic of these projects by checking out their live demos:
 28. [Huddle Landing Page With Alternate Sections](https://fm-28-huddle-landing-page-alternate.netlify.app)
 29. [Interactive Card Details Form](https://fm-29-interactive-card-details-form.netlify.app)
 30. [Easybank Landing Page](https://fm-30-easybank-landing-page.netlify.app)
+31. [Recipe Page](https://fm-31-recipe-page.netlify.app)
 
 ## Contributing 🥳🎉
 
