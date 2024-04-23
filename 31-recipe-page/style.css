@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+  --raspberry: hsl(332, 51%, 32%);
+  --nutmeg: hsl(14, 45%, 36%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --brown: hsl(30, 10%, 34%);
+  --charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+header img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+body {
+  background: var(--rose-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  min-height: calc(100vh - 2rem);
+  padding: 2rem;
+  width: 95vw;
+  max-width: 768px;
+  background-color: var(--white);
+}
+
+/* Introduction */
+.title {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--charcoal);
+  font-size: 1.75rem;
+  font-family: 'Young Serif', serif;
+}
+
+.info {
+  color: var(--brown);
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  word-spacing: 2px;
+}
+
+/* Preparation */
+.preparation {
+  background-color: var(--rose-white);
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.preparation h3 {
+  color: var(--raspberry);
+  margin-bottom: 1rem;
+}
+
+.preparation li {
+  font-size: 0.9rem;
+  color: var(--brown);
+  list-style-position: inside;
+  margin-bottom: 0.5rem;
+}
+
+.preparation ul b {
+  color: var(--brown);
+}
+
+/* Ingredients */
+
+.ingredients {
+  border-bottom: 1px solid var(--light-grey);
+  padding: 1.25rem 0;
+}
+
+.ingredients h1 {
+  font-weight: 400;
+  color: var(--nutmeg);
+  font-family: 'Young Serif', serif;
+  margin-bottom: 1rem;
+}
+
+.ingredients li {
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+/* Instructions */
+
+.instructions {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.instructions h1 {
+  font-weight: 400;
+  color: var(--nutmeg);
+  font-family: 'Young Serif', serif;
+  margin-bottom: 1rem;
+}
+
+.instructions li::marker {
+  color: var(--nutmeg);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.instructions li {
+  color: var(--brown);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  accent-color: var(--nutmeg);
+  padding-left: 0.75rem;
+}
+
+.instructions li b {
+  color: var(--brown);
+}
+
+/* Nutrition */
+.nutrition {
+  padding: 1.25rem 0;
+}
+
+.nutrition h1 {
+  font-weight: 400;
+  color: var(--nutmeg);
+  font-family: 'Young Serif', serif;
+  margin-bottom: 1rem;
+}
+
+.nutrition p {
+  color: var(--brown);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.nutrition table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.nutrition tr {
+  border-bottom: 1pt solid var(--light-grey);
+  font-size: 0.9rem;
+}
+
+.nutrition th {
+  color: var(--brown);
+  font-weight: 400;
+}
+
+.nutrition td {
+  padding: 0.5rem;
+  color: var(--nutmeg);
+  font-weight: 500;
+}
+
+.attribution {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--nutmeg);
+}
+
+.attribution a:hover {
+  color: var(--raspberry);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 4rem 0;
+  }
+
+  main {
+    border-radius: 1rem;
+    box-shadow: 11px 15px 17px 0px rgba(0, 0, 0, 0.1);
+  }
+}
