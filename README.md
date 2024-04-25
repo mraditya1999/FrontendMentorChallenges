@@ -69,6 +69,7 @@ Experience the magic of these projects by checking out their live demos:
 29. [Interactive Card Details Form](https://fm-29-interactive-card-details-form.netlify.app)
 30. [Easybank Landing Page](https://fm-30-easybank-landing-page.netlify.app)
 31. [Recipe Page](https://fm-31-recipe-page.netlify.app)
+32. [Social Links Profile](https://fm-32-social-links-profile.netlify.app)
 
 ## Contributing 🥳🎉
 
