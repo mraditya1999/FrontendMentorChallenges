@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
+  --light-green: hsla(75, 94%, 57%, 0.8);
   --green: hsl(75, 94%, 57%);
   --white: hsl(0, 0%, 100%);
   --grey: hsl(0, 0%, 20%);
@@ -97,7 +98,7 @@ header .location {
   padding: 0.75rem 0;
   width: 100%;
   font-family: inherit;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--white);
   transition: all 0.3s ease-in-out;
@@ -118,14 +119,15 @@ header .location {
 
 .attribution p {
   text-align: center;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .attribution a {
   text-decoration: none;
-  color: var(--grey);
+  color: var(--green);
+  transition: all 0.3s ease-in-out;
 }
 
 .attribution a:hover {
-  color: var(--green);
+  color: var(--light-green);
 }

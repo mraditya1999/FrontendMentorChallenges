@@ -8,7 +8,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/qr-code-component-9LIGpXjOwy)
+- [Solution URL](https://www.frontendmentor.io/solutions/social-links-profile-doVOndGZ0d)
 - [Live Site URL](https://fm-32-social-links-profile.netlify.app)
 
 ### Built with
